@@ -1,0 +1,136 @@
+Create a practical day-wise action plan based on the following user goal.
+
+USER DETAILS
+
+Goal / Task: {{ $json["title"] }}
+Email: {{ $json["Email"] }}
+Exam Date / Deadline: {{ $json["Exam Date"] }}
+Available Hours Per Day: {{ $json["Study Hours Per Day"] }}
+
+IMPORTANT:
+
+- The Goal / Task (Title) is the main information used to create the plan.
+- Create the plan specifically based on the Title.
+- Do NOT ask the user any questions.
+- Do NOT ask for additional information.
+- Do NOT say that information is missing.
+- Use the Exam Date as the DEADLINE.
+- Start planning from TODAY.
+- Use the current workflow date/time to determine today's date.
+- Do not create dates after the Exam Date.
+- Calculate the available days automatically.
+- If the Exam Date is today, create a practical one-day plan for today.
+- If the Exam Date is very close, prioritize the most important activities and revision.
+- Never schedule more than the Available Hours Per Day on any day.
+
+CURRENT DATE:
+{{ $today }}
+
+CREATE THE PLAN USING THESE COLUMNS:
+
+1. Date
+2. Day
+3. Task
+4. Topic / Activity
+5. Duration
+6. Priority
+7. Short Action / Revision
+
+PLANNING RULES:
+
+- Understand the Title and determine the appropriate tasks/topics.
+- Break the goal into small, realistic, actionable tasks.
+- Arrange tasks in a logical order.
+- Keep the workload practical.
+- Do not create unnecessary tasks.
+
+FOR WORKSHOP / LEARNING GOALS:
+
+- Start with important concepts.
+- Include practical activities.
+- Include hands-on practice where appropriate.
+- Include revision.
+- Include a short test or review when useful.
+
+FOR EXAM PREPARATION:
+
+- Prioritize important concepts.
+- Include problem-solving practice.
+- Include revision.
+- Include practice questions.
+- Use the final available time mainly for revision and weak areas.
+
+FOR PROJECT GOALS:
+
+- Planning
+- Requirement understanding
+- Development
+- Testing
+- Bug fixing
+- Final review
+
+FOR INTERVIEW PREPARATION:
+
+- Concept learning
+- Coding/problem practice
+- Interview questions
+- Mock interview
+- Revision
+
+FOR GENERAL GOALS:
+
+- Break the goal into logical actionable steps.
+- Include progress review.
+- Include final completion/review.
+
+DURATION RULES:
+
+- Total scheduled duration for each day MUST NOT exceed Available Hours Per Day.
+- Use realistic durations such as:
+  - 30 minutes
+  - 1 hour
+  - 1.5 hours
+  - 2 hours
+- If available time is limited, prioritize important activities.
+
+PRIORITY:
+
+Use ONLY:
+- High
+- Medium
+- Low
+
+SHORT ACTION / REVISION:
+
+Keep it very short and practical.
+
+Examples:
+- Review key concepts
+- Solve 5 questions
+- Practice without notes
+- Revise important topics
+- Complete hands-on practice
+- Take a short test
+
+OUTPUT FORMAT:
+
+Day-wise Plan
+
+| Date | Day | Task | Topic / Activity | Duration | Priority | Short Action / Revision |
+|------|-----|------|------------------|----------|----------|--------------------------|
+
+After the table, provide:
+
+Short Summary:
+- Total available days
+- Total planned study hours
+- Main focus
+- Final revision/test activity
+
+FINAL RULE:
+
+Return ONLY the Day-wise Plan and Short Summary.
+
+Do not ask questions.
+Do not request additional information.
+Generate the complete plan directly from the Title, Exam Date, Available Hours Per Day, and current date.
